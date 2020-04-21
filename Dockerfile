@@ -12,6 +12,10 @@ RUN bluebase plugins
 
 RUN npm i -g expo-cli
 
+RUN apk --no-cache add git
+
+RUN git --version
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["sh", "/entrypoint.sh"]
